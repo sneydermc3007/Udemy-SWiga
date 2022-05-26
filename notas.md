@@ -154,3 +154,32 @@ Crear un carpeta para los diferentes ejercicios dentro del curso para que sirva 
 
 ### Clase 16: Subcription y Unsubscribe
 Una suscripción en RxJS es un recurso desechable que generalmente representa la ejecución de un Observable
+
+``` ts
+// Para cancelar una subcricion se utiliza:
+
+setTimeout (() =>{
+    subs.unsubscribe()
+}, 3000)
+```
+
+### Clase 17 Terminar observables en cadena
+
+Los unsubscribe sirven para cortar los flujos de datos o eventos debido a que las subcriones permanecen en memoria y no tine sentido que la subcriones permanezcan ejecutandose en el sistema.
+
+### Clase 18: Subject
+
+Los subjects de RxJs son un tipo de Observable especial que nos permiten realizar diversas tareas como el multicasting, es decir, compartir exactamente el mismo stream de datos con todas las subscripciones sin preocuparnos del tipo de Observable que estamos manejando.
+
+Tiene 3 carecteristicas principales 
+1. Casteo múltiple
+2. Tambien es un observer
+3. Next, error y complete
+
+### Clase 19: Subject 2
+
+Caundo la data es producida por el observable en si mismo, es considerado un __"Cold Observable"__. Pero cuando la data es producida FUERA del observable es llamado __"Hot Observable".__
+
+Permitiendo ingresar informacion al flujo de datos que el Observable esta emitiendo.
+
+Como funcionan: [Blog RxJs](https://pablomagaz.com/blog/rxjs-subjects-que-son-como-funcionan)
