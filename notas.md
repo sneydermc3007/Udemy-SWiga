@@ -85,7 +85,7 @@ __Conslusiones:__
 - Patron iterator: Poder ejecutar operaciones secuenciales.
 - Programcion funcional: Tener con tareas específicas que reciban argumentos y no muten la informacion.
 
-### Clase #9: ¿Como leer los diagramas de canicas?
+### Clase 9: ¿Como leer los diagramas de canicas?
 
 ``` 
 scan( (x,y) => x + y )
@@ -94,6 +94,63 @@ scan( (x,y) => x + y )
 ![1](Data/DiagramaCanicas.jpg)
 
 
-### Clase #10: Configuracion del proyecto
+### Clase 10: Configuracion del proyecto
 
 Alojado en GitHub: [Repositorio](https://github.com/Klerith/curso-rxjs-inicio.git)
+
+## Sección 3: Observables
+
+### Clase 12: Temas puntuales
+
+Esta sección abre las puertas de la programacion reactiva, en esta seran veran temas como:
+1. Observers
+2. Subscriber
+3. Unsubscribe
+4. Subjects
+5. Hot y Cold Observables
+6. Observables en cadena
+7. Y más
+
+### Clase 13: Nuetro primer observable
+
+Un observable es un elemento que permite emitir valores, aunque algunas veces puede emitir *X cantidad de valore*, puede ser que emita *1*, *0* o *nada*.
+
+![1](Data/PrimerObservableDiagrama.jpg)
+
+Las subcriciones son las emisiones de nuestro observable, a lo que la gente debe estar pendiende.
+
+__Ejemplo:__ Un chats de WhatsApp donde X persona bloquea a Y persona, por ende por mas que Y persona envie mensajes la persona X no va recibir ninguno de esos mensajes ya que se hizo *subscriber.complete()*
+![2](Data/PrimerObservableCode.jpg)
+
+### Clase #14: Observer y suscriber
+
+Formas de llamar un observable:
+
+``` ts
+obs$.subscribe( resp => {
+    console.log(resp);
+})
+
+// Para generar las valdiar los errores antes del complete
+obs$.subscribe ( 
+    valor => console.log('next:', valor),
+    err => console.warn('error:', err), 
+    () => console.info('Done')
+);
+
+// Importando el Observer de RxJs
+// El observe es igual a un objeto, el Observer es una interfez que nos obliga a establecer 
+// todo lo que el objeto necesita para ser un observer valido.
+const observer: Observer<any> = {
+    next: value => console.log('siguiente [next]:', value),
+    error: error => console.warn('error [obs]:', error),
+    complete: () => console.info('completado [obs]')
+}
+```
+
+### Clase 15: Nota blioteca de ejercicios
+
+Crear un carpeta para los diferentes ejercicios dentro del curso para que sirva de biblioteca.
+
+### Clase 16: Subcription y Unsubscribe
+Una suscripción en RxJS es un recurso desechable que generalmente representa la ejecución de un Observable
