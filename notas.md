@@ -183,3 +183,91 @@ Caundo la data es producida por el observable en si mismo, es considerado un __"
 Permitiendo ingresar informacion al flujo de datos que el Observable esta emitiendo.
 
 Como funcionan: [Blog RxJs](https://pablomagaz.com/blog/rxjs-subjects-que-son-como-funcionan)
+
+## Seccion 4: Funciones para crear Observables
+
+### Clase 22: Temas puntuales de la sección
+
+RxJS proporciona bastantes funcionalidades distintas para crear Observables, algunas de estas son las siguientes:
+
+>
+    1. of()
+    2. fromEvent()
+    3. interval()
+    4. timer()
+    5. asyncScheduler()
+
+Otras bastante populares son:
+>
+    1. from()
+    2. range()
+    3. defer()
+    4. ajax()
+    5. fromFetch()
+    6. generate()
+
+### Clase 23: of
+
+Es una función que nos permite a nosotros crear observables en base a un listado de elementos, nos permite crear Observables a partir de arrays, objetos, strings etc. El Observable emitirá cada argumento que reciba de manera individual, y después será completado
+
+![1](Data/Funcion-of.jpg)
+
+_Nota_: Los observables pueden tambien trabajar de manera asincrona.
+
+### Clase 24: fromEvent
+
+Permite crear observables en base a un inventaria. El _fromEvent()_ recibe dos parametros diferentes:
+
+- El target de evento al que se añadirá la función de manejo de eventos, es decir, el elemento al que vamos a ‘escuchar’ por si se produce un evento o no.
+- El tipo de evento al que queremos ‘escuchar’.
+
+![1](Data/Funcion-FromEvent.png)
+
+### Clase 25: range
+
+Crea un observable que emite una secuencia de numeros ascendentes con base a un range, este recibe dos parametros:
+
+- El valor inicial del rango.
+- La longitud del rango, es decir, la cantidad de números que se emitirán.
+
+``` ts
+import {range} from "rxjs"
+
+const number$ = range(5)
+```
+
+__Nota__: El range rquiere obligatoriamente el start(primer parametro).
+
+
+### Clase 26: interval y timer
+
+Son funciones asincronas
+
+El interval emite una secuencia de numeros que va desde 0 hasta el infinito, en un intervalo de tiempo que le asignemos. El parámetro del tamaño del intervalo de tiempo es opcional, con un valor por defecto de 0.
+
+El timer es similar al interval, emite valores despues de tiempo asignado y se completa. Es decir a partir de una demora inicial, empieza a emitir una secuencia ascendente de números, con el intervalo entre emisiones que especifiquemos, la diferencia con la funcion **interval()** es que podemos especificar cuándo queremos que comiencen a producirse las emisiones.
+
+Recibe dos parametros los cuales son: 
+- La demora inicial tras la cual se empezarán a emitir valores.
+- El valor del intervalo entre emisiones.
+
+__Nota__: Ambos parametros son opcinales, con un valor por defecto de 0.
+
+### Clase 29: asyncScheduler
+
+Este no crear un observable sino una subcripcion. Se utiliza mejor para retrasar las tareas en el tiempo o para programar tareas que se repiten en intervalos.
+
+``` ts
+import { asyncScheduler } from 'rxjs';
+
+const task = () => console.log('it works!');
+
+asyncScheduler.schedule(task, 2000);
+
+```
+
+### Clase 30: Mas ejemplos of & from
+
+- of = toma argumentos y genera una secuencia
+- from = crear el observable con base a un array, promise, iterable, observable
+
