@@ -572,3 +572,36 @@ Ignora los valores de la fuente durante un periodo de tiempo, tras el cual emite
 ![1](Data/Operador_auditTime.png)
 
 ## Seccion 8: Peticiones ajax usando RxJs/ajax
+
+### Clase 65: Temas puntuales de la sección
+
+En esta sección no solo se trabaja con peticiones ajax, si no que tambien tambien también configuraremos headers.
+
+__Los temas principales__:
+1. Conceptos básicos de una petición ajax
+2. Manejo de errores
+3. Fetch API
+4. getJson
+5. Ajax
+6. Diferencia entre getJson y Ajax
+7. PUT, POST, DELETE, GET
+
+### Clase 68: Peticcion usando ajax de RxJS - catchError
+
+Ajax es un operador de creacion donde se crea un Observable para una petición Ajax a partir de un objeto de petición con la url, cabeceras etc. o a partir de una URL. CatchError es un operador que Captura errores en el Observable que se manejan devolviendo un Observable nuevo o lanzando un error
+
+```ts
+import { ajax } from "rxjs/ajax";
+
+const ghibliFilmsResponse$ = ajax("https://ghibliapi.herokuapp.com/films");
+
+ghibliFilmsResponse$.subscribe(console.log);
+// Salida: AjaxResponse { ...request: {...}, status: 200...}
+```
+
+![1](Data/Operador_catchError.png)
+
+
+### Clase 69: getJSON
+
+Este metodo nos sireve para manejar los headers y traer los datos que se necesiten de la peticion ajax.
