@@ -271,3 +271,139 @@ asyncScheduler.schedule(task, 2000);
 - of = toma argumentos y genera una secuencia
 - from = crear el observable con base a un array, promise, iterable, observable
 
+
+## Seccion 5: Operadores basicos
+
+### Clase 32: Temas puntuales de la sección:
+
+1. Explicación de los operadores
+2. Operadores como:
+>
+    a. map
+    b. pluck
+    c. mapTo
+    d. filter
+    e. tap
+    f. reduce
+    g. scan
+3. Encadenamiento de operadores
+
+### Clase 33: ¿Que son los operadores?
+
+Se emite un flujo de información que controlada(filtrada) donde se acepta la emicion de lo que nos interesa para realizar un trabajo en especifico. Los operadores en _RxJs_ son funciones que construyen sobre la fundación de los observables para tener una manipulación más sofisticada
+
+Que son: [Documentacion](https://puntotech.github.io/rxjs-docu/concepts/operators)
+
+Como funcionan los operadores: [Blog RxJs](https://pablomagaz.com/blog/como-funcionan-operadores-rxjs)
+
+### Clase 34: map
+
+Permite transformar lo que recibe o lo que emite el observable,  aplicando una función de transformación a cada uno de los valores emitidos por la fuente, para obtener los valores de salida correspondientes.
+
+![map](Data/Operador_map.jpg)
+
+``` ts
+import { map } from "rxjs/operators";
+import { fromEvent, range } from "rxjs";
+
+const number$ = range(1, 5);
+
+number$.pipe(map((number) => number * 2)).subscribe(console.log);
+// Salida: 2, 4, 6, 8, 10
+```
+
+### Clase 35: pluck
+
+Sirve para cuando queremos extraer el valor del objeto que estamos recibiendo y buscamos que esa sea la nueva salida del observable. Es como *map*, pero se utiliza para extraer una de las propiedades anidadas de los objetos emitidos.
+
+Dada una lista de cadenas que describan la ruta de una propiedad de un objeto, obtiene el valor de la propiedad anidada especificada de todos los valores del Observable fuente. Si la propiedad no existe, se devolverá undefined para ese valor en concreto.
+
+![1](Data/Operador_pluck.jpg)
+
+``` ts
+import { pluck } from "rxjs/operators";
+import { from } from "rxjs";
+
+const language$ = from([
+  { name: "Ruby", type: "Multiparadigma" },
+  { name: "Haskell", type: "Funcional" },
+  { name: "Rust", type: "Multiparadigma" },
+]);
+
+language$.pipe(pluck("name")).subscribe(console.log);
+// Salida: Ruby, Haskell, Rust
+```
+
+### Clase 36: mapTo
+
+ Recibe un valor constante como argumento, que emite cuandoquiera que el Observable fuente emita un valor. En otras palabras, ignora el valor emitido, y simplemente utiliza el momento de emisión para saber cuándo emitir el valor constante proporcionado.**Es como map, pero proyecta cada emisión siempre al mismo valor.**
+
+``` ts
+import { mapTo } from "rxjs/operators";
+import { interval } from "rxjs";
+
+const number$ = interval(1000);
+
+number$.pipe(mapTo("La respuesta es 42")).subscribe(console.log);
+// Salida: La respuesta es 42, La respuesta es 42, La respuesta es 42, La respuesta es 42...
+```
+
+![1](Data/Operador_mapTo.jpg)
+
+### Clase 37: filter
+
+Simplimente toma o rechaza ciertos valores según los criterios de filtrado, solo emitiendo un valor si cumple una condición determinada.
+
+![1](Data/Operador_filter.jpg)
+
+### Clase 38: Cadena de operadores
+
+_Nota:_ El orden de la cadena determina la salida
+
+``` ts
+const keyup$ = fromEvent<KeyboardEvent>(document, 'keyup').pipe(
+    map( event => event.code), //keyboardEvent, string
+    filter( key => key === 'Enter' )
+);
+```
+
+### Clase 39: tap
+
+Es un operador de utilidad que lleva a cabo un efecto colateral en cada emisión del Observable fuente, pero retorna un Observable que es idéntico a la fuente. Retorna un Observable que refleja al Observable fuente, pero modificado de tal manera para que el Observador que se le haya proporcionado al operador pueda ser llamado para llevar a cabo un efecto colateral por cada valor, error o completación emitidos por el Observable fuente.
+
+``` ts
+import { of } from "rxjs";
+import { map, tap } from "rxjs/operators";
+
+const fruit$ = of("Cereza", "Fresa", "Arándano");
+
+fruit$
+  .pipe(
+    tap((fruit) => console.log(`Antes: ${fruit}`)),
+    map((fruit) => fruit.toUpperCase()),
+    tap((fruit) => console.log(`Después: ${fruit}`))
+  )
+  .subscribe();
+
+/* Salida:
+Antes: Cereza, Después: CEREZA,
+Antes: Fresa, Después: FRESA,
+Antes: Arándano, Después: ARÁNDANO
+*/
+```
+
+### Clase 42: reduce
+
+Es un operador matetico de agregacion , donde se aplica una función acumuladora al Observable fuente y retorna el resultado acumulado una vez se completa la fuente.
+
+![1](Data/Operador_reduce.jpg)
+
+__Nota:__ *acc* es acumulado, *curr* es el actual y el *0* es valor inicial
+
+### Clase 43: scan
+
+Tambien es un operador matetico de agregacion pero que a diferencia del _reduce_ este emite cada valor de la acumulacion.
+
+![1](Data/Operador_scan.jpg)
+
+## Seccion 6: Operadores no tan comunes
