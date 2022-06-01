@@ -528,3 +528,47 @@ language$.pipe(distinctUntilKeyChanged("name")).subscribe(console.log);
 ```
 
 ## Seccion 7: Operadores que trabajan con tiempo
+
+### Clase 57: Temas puntuales de la sección
+
+Los operadores de tiempo del tiempo, son los que buscan trabajar con _intervalos de tiempo_.
+
+1. debounceTime
+2. throttleTime
+3. sampleTime
+4. sample
+5. auditTime
+
+### Clase 58: debounceTime
+
+Este operador emite un valor del Observable _si y solo si_, pasa un periodo de tiempo determinado sin que este emita ningún valor.
+
+El `debonceTime` retrasa los valores del Observable si este emite un valor antes de que pase el periodo de tiempo, el valor almacenado será eliminado, y nunca se emitirá en el Observable resultante.
+
+![1](Data/Operador_debounce.png)
+
+### Clase 59: throttleTime
+
+Emite un valor del Observable fuente e ignora las emisiones siguientes durante un periodo de tiempo determinado. Después, repite el proceso.
+
+![1](Data/Operador_throttleTime.png)
+
+### Clase 60: sampleTime
+
+Emite la emisión más reciente del Observable fuente en cada periodo de tiempo determinado
+
+![1](Data/Operador_sampleTime.png)
+
+### Clase 61: sample
+
+Este operador muestra la emisión más reciente del Observable fuente cuando un segundo Observable, el notificador, emite un valor.
+
+![1](Data/Operador_sample.png)
+
+### Clase 62: auditTime
+
+Ignora los valores de la fuente durante un periodo de tiempo, tras el cual emite el valor más reciente del Observable fuente. Cuando recibe un valor de la fuente, lo ignora, además de todos los valores posteriores durante un periodo de tiempo. Una vez finalizado el periodo de tiempo, emite el valor más reciente del Observable fuente.
+
+![1](Data/Operador_auditTime.png)
+
+## Seccion 8: Peticiones ajax usando RxJs/ajax
