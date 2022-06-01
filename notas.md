@@ -407,3 +407,124 @@ Tambien es un operador matetico de agregacion pero que a diferencia del _reduce_
 ![1](Data/Operador_scan.jpg)
 
 ## Seccion 6: Operadores no tan comunes
+
+### Clase 46: Temas puntuales de la sección
+
+1. take
+2. first
+3. takeWhile
+4. takeUntil
+5. skip
+6. distinct
+7. distinctUntilChanged
+8. distinctUntilKeyChanged
+
+### Clase 47: take
+
+Este operador emite las primeras x emisiones del Observable fuente, obtiene los primeros count valores de la fuente, y se completa.
+
+![1](Data/operadores_take.jpg)
+
+### Clase 48: firts
+
+Emite el primer valor (o el primer valor que cumpla una condición) emitido por un Observable.
+
+![1](Data/operador_firts.jpg)
+
+_Nota:_ Si se llama sin ningún argumento, first emite el primer valor del Observable fuente y se completa.
+
+
+### Clase 49: takeWhile
+
+Emite las emisiones del Observable fuente siempre y hasta cuando cumplan la condición especificada. Se completa en cuanto haya un valor que no cumpla la condición.
+
+![1](Data/operador_takeWhile.jpg)
+
+### Clase 50: takeUntil
+
+Emite los valores emitidos por el Observable fuente hasta que un segundo Observable emita un valor, pasando valores de la fuente observable al observador, hasta que un observable proporcionado conocido como notificador emite su primer valor. **Si el notificador emite u valor, cancela la suscripcion y se completa**
+
+![1](Data/Operadores_takeUntil.png)
+Referencias: [TakeUntil](https://indepth-dev.translate.goog/reference/rxjs/operators/take-until?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es-419&_x_tr_pto=op,sc)
+
+### Clase 51: skip
+
+Retorna un Observable que se salta las primeras x emisiones del Observable fuente,`skip` se salta un número determinado por el parámetro count de emisiones del Observable fuente, y después continúa emitiendo valores normalmente.
+
+![1](Data/Operador_skip.png)
+
+### Clase 52: distinct
+
+Retorna un Observable que emite todos los elementos del Observable fuente que sean distintos a los elementos anteriores
+
+_Nota_: 
+> Si se proporciona una función keySelector, se proyectará cada valor emitido por el Observable fuente a un nuevo valor, que se comparará con los valores previamente emitidos para ver si es distinto o no. Si no se proporciona una función keySelector, se compararán los valores emitidos por el Observable fuente directamente con las emisiones previas.
+
+``` ts
+import { distinct } from "rxjs/operators";
+import { of } from "rxjs";
+
+const fruit$ = of(
+  "Fresa",
+  "Cereza",
+  "Cereza",
+  "Arándano",
+  "Fresa",
+  "Arándano",
+  "Cereza"
+);
+
+fruit$.pipe(distinct()).subscribe(console.log);
+// Salida: Fresa, Cereza, Arándano
+```
+
+### Clase 53: distinctUntilChanged
+
+Funciona de manera muy similar al distinct solo que en este caso en vez mirar todo el observable, solo le importa el anterior.Retorna un Observable que emite todos los elementos emitidos por el Observable fuente que sean distintos al valor anterior
+
+``` ts
+import { distinctUntilChanged } from "rxjs/operators";
+import { of } from "rxjs";
+
+const fruit$ = of("Fresa", "Cereza", "Cereza", "Arándano", "Arándano", "Fresa");
+
+fruit$.pipe(distinctUntilChanged()).subscribe(console.log);
+// Salida: Fresa, Cereza, Arándano, Fresa
+```
+
+### Clase 54: distinctUntilKeyChanged
+
+Retorna un Observable que emite los elementos del Observable fuente cuya propiedad especificada sea distinta a la del elemento anterior
+
+_Nota_
+> Si se proporciona una función de comparación, se utilizará para comprobar si cada elemento se debe emitir o no.
+
+Si no se proporciona una función de comparación, se utiliza una verificación de igualdad.
+
+``` ts
+// Emite el objeto lenguaje si su propiedad name es distinta a la del objeto anterior
+
+import { distinctUntilKeyChanged } from "rxjs/operators";
+import { of } from "rxjs";
+
+const language$ = of(
+  { name: "Java", type: "Orientado a objetos" },
+  { name: "Ruby", type: "Multiparadigma" },
+  { name: "Ruby", type: "Multiparadigma" },
+  { name: "Haskell", type: "Funcional" },
+  { name: "Haskell", type: "Funcional" },
+  { name: "Java", type: "Orientado a objetos" },
+  { name: "Ruby", type: "Multiparadigma" }
+);
+
+language$.pipe(distinctUntilKeyChanged("name")).subscribe(console.log);
+/* Salida:
+  { name: "Java", type: "Orientado a objetos" },
+  { name: "Ruby", type: "Multiparadigma" },
+  { name: "Haskell", type: "Funcional" },
+  { name: "Java", type: "Orientado a objetos" },
+  { name: "Ruby", type: "Multiparadigma" }
+*/
+```
+
+## Seccion 7: Operadores que trabajan con tiempo
