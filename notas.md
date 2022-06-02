@@ -720,6 +720,3 @@ Acepta un Array de Observables o un diccionario de Observables, y retorna otro O
 
 ![1](Data/forkJoin.png)
 
-## Seccion 11: Ejercicios de reforzamiento
-
-### Clase 98: Material de la sección
