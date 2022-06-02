@@ -605,3 +605,65 @@ ghibliFilmsResponse$.subscribe(console.log);
 ### Clase 69: getJSON
 
 Este metodo nos sireve para manejar los headers y traer los datos que se necesiten de la peticion ajax.
+
+## Seccion 9: Operadores de transformacion.
+
+### Clase 74: Temas puntuales de la sección
+
+Aveces cuando obtenemos informacion es muy poco legible es por esto que para mejorar ReactiveX trae las siguientes funciones y operadores:
+
+1. mergeAll
+2. mergeMap
+3. switchMap
+4. concatMap
+5. exhaustMap
+
+### Clase 76: mergeAll
+
+Este operador crea un Observable de salida que emite concurrentemente los valores de todos los Observables de entrada, que termina uniendo varios Observables en uno solo.
+
+_Nota_:
+> `merge` se subscribe a cada Observable de entrada de forma concurrente, y emite sus valores, sin transformarlos, en el Observable resultante. El Observable resultante solo se completa cuando todos los Observables de entrada se hayan completado.
+
+![1](Data/Operadores_merge.png)
+
+### Clase 77: Tipando los operadores
+
+Recordar que TypeScript cuando le ponemos un tipado permite detectar errores de asigancion en tiempo de desarrollo.
+
+### Clase 78: mergeMap
+
+Este operador proyecta cada valor emitido por la fuente a un Observable interno que se fusiona en el Observable resultante esto funciana con ayuda del operador `mergeAll`, retornando un Observable que, después de aplicar una función a cada elemento emitido por el Observable fuente, donde dicha función retorna un Observable, fusiona los Observables internos resultantes y emite el resultado de la fusión.
+
+![1](Data/Operador_mergeMap.png)
+
+### Clase 79: switchMap
+
+Su funcionamiento es similiar al `mergeMap` sin embargo este retorna un Observable que emite elementos tras **aplicar una función a cada elemento emitido** por el Observable fuente, osea que hasta que no se completa el observable no se completa no puede iniciar con el otro por ende cancela el ultimo.
+
+![1](Data/Operador_switchMap.png)
+![2](Data/EjemploSwitchMap.jpg)
+
+### Clase 80: switchMap vs MergeMap
+
+Ambos permiten controlar un observable a partir de los elementos de otro, de este modo podemos generar un tercer observable como resultado (o devolver el segundo observable modificado), su principal diferencia radica en que: A diferencia de `MergeMap`, si el primer observable retorna un nuevo valor `SwitchMap` cancela la suscripción actual, no existe la posiblidad de que haya ejecuciones en paralelo como con `MergeMap`.
+
+### Clase 81: concatMap
+
+Es otro operador de aplacamiento que proyecta cada valor emitido por la fuente a un Observable interno que se une al Observable resultante de forma secuencial, esperando a que cada Observable interno esté completo antes de unir el siguiente.
+
+_Notas_:
+> Se debe utilizar `concatMap` si se quiere esperar a que cada Observable interno esté completo antes de suscribirse al siguiente
+
+> A diferencia del `switchMap` este espera que el otro se complete el observable y no lo cancela.
+
+![1](Data/Operador_concatMap.png)
+
+### Clase 82: exhaustMap
+Proyecta cada emisión de la fuente a un Observable interno que se fusiona con el Observable resultante únicamente si el Observable interno anterior se ha completado.
+
+Este operador es util cuando tenemos objetos o elementos que estan haciendo demasiado spam o estan lanzando varios eventos rapidamente, el uso principal de `exhaustMap` se reduce a cuando tenemos muchos valores que se pueden ignorar.
+
+![1](Data/Operador_exhaustMap.png)
+
+## Seccion 10: Operadores y metodos de combinancion de observables.
