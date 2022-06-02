@@ -667,3 +667,59 @@ Este operador es util cuando tenemos objetos o elementos que estan haciendo dema
 ![1](Data/Operador_exhaustMap.png)
 
 ## Seccion 10: Operadores y metodos de combinancion de observables.
+
+### Clase 87: Temas puntuales de la sección
+
+Esta seccion cuenta con operadores y metodos para combinar las emisiones de los observables o bien varios observables entre sí.
+
+Los temas principales son:
+
+1. startWith
+2. endWith
+3. concat
+4. merge
+5. combineLatest
+6. forkJoin
+
+### Clase 88: startWith
+
+Emite los elementos que se especifiquen como argumentos antes de empezar a emitir las emisiones del Observable fuente. Primero emite sus argumentos en orden, y después las emisiones de la fuente.
+
+![1](Data/Operador_startWith.png)
+
+### Clase 89: endWith
+
+Devuelve un observable que emitirá todos los valores de la fuente y, a continuación, emitirá sincrónicamente los valores proporcionados inmediatamente después de que se complete la fuente.
+
+_Nota_: 
+> Pasar un último argumento de un Programador está en desuso y puede dar como resultado tipos incorrectos en _TypeScript._
+>>Esto es útil para saber cuándo termina un observable. Particularmente cuando se combina con un operador como `takeUntil`.
+
+![1](Data/Operador_endWith.png)
+
+### Clase 91: concat - Función
+
+Concatena varios Observables de entrada, uno tras otro, emitiendo secuencialmente todos los valores de cada uno de ellos
+![1](Data/Funcion_concat.png)
+
+### Clase 92: merge - Metodo
+
+Este metodo crea un Observable de salida que emite concurrentemente los valores de todos los Observables de entrada
+
+![1](Data/Metodo-merge.png)
+
+### Clase 93: combineLatest
+
+Combina varios Observables para crear otro Observable cuyos valores se calculan a partir de las emisiones más recientes de cada uno de sus Observables de entrada. `combineLatest` combina los valores de todos los Observables de entrada. Para ello, se suscribe a cada uno de los Observables en orden, y cuando alguno de los Observables emite, recoge las emisiones más recientes de cada uno en un array.
+
+![1](Data/combineLastest.png)
+
+### Clase 94: forkJoin
+
+Acepta un Array de Observables o un diccionario de Observables, y retorna otro Observable que emite o bien un array de valores en el mismo orden que el array proporcionado, o un diccionario de valores con la misma forma que el diccionario proporcionado. **Esperando a que todos los Observables se completen, y combina sus últimas emisiones.**
+
+![1](Data/forkJoin.png)
+
+## Seccion 11: Ejercicios de reforzamiento
+
+### Clase 98: Material de la sección
