@@ -218,3 +218,82 @@ class MyClass {
 ```
 
 ## Seccion 3: Aplicacion #1: Hola Mundo
+
+### Clase 34: ¿Que aprenderemos en esta sección?
+
+1. ¿Qué son los componentes?
+2. ¿Qué son las directivas estructurales?
+3. Uso de plunker para nuestra primera interacción con Angular.
+4. Trabajando de forma local un proyecto en Angular.
+5. Una breve introducción sobre todos los archivos usados en el QuickStart de Angular.
+6. Uso de Bootstrap 4 para nuestros estilos.
+7. Crear archivos .HTML para que se encarguen de la estructura visual de nuestros componentes.
+8. Crearemos una aplicación con 3 componentes re-utilizables.
+9. *ngFor y el *ngIf
+
+### Clase 36: Introduccion a los componentes y directivas estructurales
+
+#### Componentes
+
+Un componentes son pequeñas clases que cumplen(vistas) una tarea especifica. 
+
+Ejemplo: Menu de navegacion, barra lateral(side bar), lugar de información, pie de pagina
+
+![1](/Curso%20Angular/assets/Componentes.jpg)
+
+
+#### Directivas estructurales
+
+Son instrucciones que le dicen a la parte del HTML(template) que tiene que hacer.
+
+- __ngIF__: Se encarga de mostrar u ocultar elemteos HTML en la pagina web.
+- __ngFor__: Se engarca de hacer repeticiones de elementos HTML en la pagina web
+
+![1](/curso%20Angular/assets/DirectivasAngular.jpg)
+
+### Clase 37: Primera interaccion en Angular
+
+En la documentacion oficial de [Angular](http://angular.io) hay informacion para ayudar a construir una pagina web.
+
+- __Pk__: Paquete o modulo
+- __I__: Interfaces
+- __C__: Clase
+- __K__: Constante
+- __F__: Funcion
+- __E__: Enumeracion
+- __P__: Pipe
+
+### Clase 40: Estructura del proyecto
+
+- __node_modules__: Esta carpeta contiene los paquetes del proyecto
+- __src__: Es la carpeta donde esta la aplicacion de angular
+- __.editconfig__: Archivo con las configuraciones del editor
+- __.gitignore__: Este archivo ignora  lo que no ueremos que se monte al repositorio.
+- __angular__.json: Le dice a angular como es nuestra aplicacion y como debe de funcionar
+- __package__-lock.json: Le dice a node como es creado el `package.json`
+- __package__.json: Se crea de forma automatica donde se encuentran las diferentes dependencias
+- __Readme__.md: Explica el code
+- __tsconfig__.json: Como debe de trabajar ts la app con que estandar queremos correr la app.
+
+- __app__: La aplicacion con sus archivos para la estructuracion del componente
+- __assests__: Para tener los recursos estaticos
+- __environments__: Para tener las variables de ambiente de produccion y desarrollo
+- __main__.ts: Es lo primero que ejecuta angular al lanzar el proyecto
+
+### Clase 43: Creando el footer.component
+
+Para crear un componente se debe de ejecutar el siguiente comando: `ng generate component (ruta)/nombre`
+
+
+### Clase 45: Directivas estructurales: *ngFor y el ngIf
+
+Las directivas *ngIf y *ngFor son directivas de angular que podemos agregarle a los elementos HTML.
+
+- __ngIf__: Permite evaluar de forma condicional una condición que devolverá un resultado booleano (true or false) y dicho  resultado se suele utilizar con la finalidad de mostrar u ocultar una información.
+
+- __ngFor__: Permite iterar una array, objeto, etc. Normalmente con el fin de insertar cada uno de los elementos contenidos en su interior
+
+
+El `ngFor` trabaja con base a arreglos y el `ngIf` con base a expresiónes que den resultados de tipo booleano.
+
+## Seccion 4: Aplicacion #2: Aplicacion de una sola pagina SPA
