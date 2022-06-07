@@ -326,3 +326,60 @@ Tienen caracteristicas principales como:
 ### Clase 64: Pipes: Transformacion visual de la data
 
 Es una utilidad en Angular que nos permite transformar los datos, , a la hora de mostrarlos en los templates de los componentes.
+
+## Seccion 5: Pipes -Transforman los valores mostrados en pantalla
+
+### Clase 73: Introduccion a la seccion
+
+Un pipe es un metodo o una funcion la cual recibe _x_ cantidad de argumentos, por lo menos siempre va recibir uno para procesarlo y emitiendo una salida pronosticada.
+
+_Nota_: La salida no muta el objeto que se recibe como argumento, sola la transformar de forma visual.
+
+### Clase 74: ¿Que aprenderemos en esta sección?
+
+1. Pipes uppercase y lowercase
+2. Pipe Slice
+3. Pice Decimal
+4. Pipe Percent
+5. Pipe Currency
+6. Pipe Json
+7. Pipe Async
+8. Pipe Date
+9. Pipes personalizados
+9.1. Capitalizar palabras y nombres
+9.2. Creacion de un pipe, que permite cargar recursos externos de forma segura.
+
+### Clase 75: Inicio del proyecto y la introduccion a los Pipes
+
+Pipes (Tuberias) `|`
+
+Sirven para transformar la data de manera visual
+
+EjemploS:
+
+``` ts
+const texto = "Hola mundo"
+{{ texto | uppercase}}
+
+//Resultado
+HOLA MUNDO
+----------------------------------------------------------------
+
+fecha = new Date(2010, 10, 15)
+{{fecha | date:"dd/mm/yy"}}
+
+//Resultado
+15/12/2010
+```
+
+### Clase 77: Pipe -> Slice
+
+Crea un nuevo `Array` o `String` que contiene un subconjunto (porción) de los elementos.
+
+``` ts  
+{{ value_expression | slice : start [ : end ] }}
+```
+
+### Clase 
+
+    
