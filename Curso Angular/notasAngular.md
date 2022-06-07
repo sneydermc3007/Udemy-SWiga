@@ -297,3 +297,32 @@ Las directivas *ngIf y *ngFor son directivas de angular que podemos agregarle a 
 El `ngFor` trabaja con base a arreglos y el `ngIf` con base a expresiónes que den resultados de tipo booleano.
 
 ## Seccion 4: Aplicacion #2: Aplicacion de una sola pagina SPA
+
+### Clase 48: ¿Qué veremos en esta sección?
+
+1. Crearemos una aplicación de una sola página (Single Page Application)
+2. Creación de proyectos de Angular usando el CLI (Command Line Interface)
+3. Instalando bootstrap o librerías de terceros usando el Angular-CLI
+4. Creación de rutas de nuestra aplicación
+5. Uso de RouterLink y RouterLinkActive para movernos de página y colocar clases a los elementos activos.
+6. Uso del modulo Router, que nos permite movernos de página mediante código.
+7. Obtención de parámetros vía URL.
+8. Configuración de nuestro primer servicio en Angular para el manejo de la data.
+9. Breve introducción a los Pipes 
+10. Uso del buscador del navbar para realizar una consulta a nuestro arreglo de héroes.
+
+
+### Clase 57: Introduccion a los servicios
+
+ Los servicios son clases que se encargan de acceder a los datos para entregarlos a los componentes.
+
+Tienen caracteristicas principales como: 
+  > 
+    - Brindar informacion a quien lo necesite
+    - Realizar peticiones CRUD (create, read, update, delete)
+    - Mantener la data de forma persistente
+    - Servir como recurso re-utilizable para nuestra aplicación
+
+### Clase 64: Pipes: Transformacion visual de la data
+
+Es una utilidad en Angular que nos permite transformar los datos, , a la hora de mostrarlos en los templates de los componentes.
