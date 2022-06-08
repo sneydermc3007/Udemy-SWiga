@@ -398,5 +398,25 @@ Crea un nuevo `Array` o `String` que contiene un subconjunto (porción) de los e
 9. Observables
 10. Maps
 
+## Seccion 7: Aplicacion #4: Lista de deseos - IONIC
+
+### Clase 115. ¿Qué aprenderemos en esta seccion?
+
+1. Uso del local storage guardar localmente información para nuestras aplicaciones.
+2. Introducción a ionic.
+3. Uso del framework de ionic.
+4. Uso de servicios que afectan el local storage.
+5. Uso de ionic DevApp para desplegar nuestra aplicación
+6. Aprenderemos a controlar estilos usando Angular.
+7. Manejo de la información a través de servicios ( update, delete, insert y select ) al local storage.
+8. Aprenderemos a utilizar pipes impuros para realizar filtros.
+
+### Clase 116. ¿Que es ionic?
+
+Ionic es un framework SDK de frontend para desarrollar aplicaciones hibridas basado en tecnologias web(HTML, CSS y JS). Es decir, un framework que nos permite desarrollar aplicaciones para iOS nativo, Android y la web, desde una única base de código. Su compatibilidad y, gracias a la implementación de Cordova e Ionic Native, hacen posible trabajar con componentes híbridos. Se integra con los principales frameworks de frontend, como Angular, React y Vue, aunque también se puede usar Vanilla JavaScript.
+
+### Clase 136: ¿Editar el titulo de la lista?
+
+El decorador `@ViewChield()` devuelve el primer elemento que coincide con una directiva, un componente o un selector de referencia de plantillas concreto.
 
     
