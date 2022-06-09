@@ -492,3 +492,22 @@ El constructor de la clase de componente se ejecuta primero, antes de la ejecuci
 ![2](./assets/CicloUdemyDespcricion.jpeg)
 
 Mas imformacion en el [Blog](https://medium.com/angular-chile/angular-componentes-y-sus-ciclos-de-vida-aa639e13a688)
+
+## Seccion 9: Aplicacion #5 --> Aplicacion con autenticacion Auth0
+
+### Clase 155: ¿Qué aprenderemos en esta seccion?
+
+Se trabajara en una pequeña aplicacion que tendra como finalidad, utilizar un sisitema de autenticacion de usuarios Auth0.
+
+Temas:
+  > 
+    1. ¿Qué es Auth0 y la documentación basada en Angular 2?
+    2. Autenticación con Facebook, Twitter, Google, entre otros...
+    3. Creación de un formulario de captura para la creación de usuarios.
+    4. Personalización de la caja de login.
+    5. Uso de servicios para bloquear rutas que no son válidas si el usuario no esta autenticado.
+    6. Obtener la información del perfil del usuario ingresado.
+
+### Clase 159: Comenzando con Auth0 - Componentes y servicios
+
+Una URL de __callback__ es una URL en su aplicación donde Auth0 redirige al usuario después de que se haya autenticado.
