@@ -419,4 +419,76 @@ Ionic es un framework SDK de frontend para desarrollar aplicaciones hibridas bas
 
 El decorador `@ViewChield()` devuelve el primer elemento que coincide con una directiva, un componente o un selector de referencia de plantillas concreto.
 
-    
+
+## Seccion 8: Componentes, directivas de atributos, ciclo de vida y más...
+
+### Clase 139: ¿Qué aprenderemos en esta seccion?
+
+1. Cambios en el estilo de algún elemento HTML utilizando variables en los componentes.
+2. Comprender y aplicar CSS en un determinado scope, sin afectar los demás componentes. 
+3. Adicionar y remover clases según variables o cualquier tipo de condición.
+4. Crearemos directivas personalizadas.
+5. Uso del ngSwitch.
+6. Crearemos una pequeña aplicación para el uso de rutas y rutas hijas.
+7. Comprenderemos el ciclo de vida de un componente o directiva.
+
+### Clase 142: ngStyle y su uso con directivas de atributos.
+
+La directiva de atributo ngStyle actualiza los estilos para un elemento HTML determinado.
+
+Establece una o más propiedades de estilo, especificadas como pares clave-valor separados por dos puntos. La clave es un nombre de estilo y el valor es una expresión a evaluar o valor a asignar.
+
+``` ts
+<h1 [ngStyle]="{'color':'red','background-color':'#ff0','text-align':'center'}">Sitio fuera de servicio</h1>
+```
+
+### Clase 144: ngClass - agregando clases de estilos a nuestos elementos HTML
+
+La directiva de atributo `[ngClass]` permite establecer una o más clases a un elemento HTML, que nos permite alterar las clases CSS que tienen los elementos de la página.
+
+``` ts
+.clase1 {
+    color:red;
+    background-color:blue;
+}
+
+.clase2 {
+    font-size:20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+<p [ngClass]="'clase1 clase2'">Prueba de directiva ngClass</p>
+```
+
+### Clase 146: Directivas personalizadas
+Las Angular customs directives sirven para construir una directiva personalizada es decir en vez de usar una directiva existente como  ngClass o *ngIf podemos construir nuestras propias directivas y aumentar la extensibilidad de nuestro código.
+
+![](../Curso%20Angular/assets/directivasPAngular.jpg)
+
+### Clase 147: ngSwitch - Multiples opciones con uan sola decision
+
+La directiva `ng-switch` es similar a __`ng-if`__ y como nos podemos imaginar es como el switch de la programación. Es decir que permite que entre varios conjuntos de tags solo esté uno de ellos, borrando los que no cumplen la condición. 
+
+- Todas las vistas que coinciden se muestran.
+- Si no hay coincidencias, se representa una vista con la directiva __`ngSwitchDefault`__ .
+
+``` ts
+<container-element [ngSwitch]="switch_expression">
+  <! - la misma vista se puede mostrar en más de un caso ->
+  <some-element *ngSwitchCase="match_expression_1">...</some-element>
+  <some-element *ngSwitchCase="match_expression_2">...</some-element>
+  <some-other-element *ngSwitchCase="match_expression_3">...</some-other-element>
+  <! - caso predeterminado cuando no hay coincidencias ->
+  <some-element *ngSwitchDefault>...</some-element>
+</container-element>
+```
+
+### Clase 152: Ciclo de vida completo de un componente
+En angular los componentes son los principales pilares de la aplicación,  cada componente tiene un ciclo de vida, una cantidad de etapas diferentes que atraviesa. Hay 8 etapas diferentes en el ciclo de vida de los componentes. Cada etapa se denomina `lifecycle hook event` o en ‘evento de enlace de ciclo de vida’. Podemos utilizar estos eventos en diferentes fases de nuestra aplicación para obtener el control de los componentes. Como un componente es una clase de TypeScript, cada componente debe tener un método constructor.
+
+El constructor de la clase de componente se ejecuta primero, antes de la ejecución de cualquier otro lifecycle hook. Si necesitamos inyectar dependencias en el componente, el constructor es el mejor lugar para hacerlo. Después de ejecutar el constructor, Angular ejecuta sus métodos de enganche de ciclo de vida en un orden específico.
+
+![](./assets/CicloDeVidaComponente.png)
+![2](./assets/CicloUdemyDespcricion.jpeg)
+
+Mas imformacion en el [Blog](https://medium.com/angular-chile/angular-componentes-y-sus-ciclos-de-vida-aa639e13a688)
