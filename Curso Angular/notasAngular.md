@@ -574,3 +574,15 @@ Formularios basados ​​en plantillas __(Template Forms)__ y formularios react
 3. En un enfoque basado en plantillas, la mayor parte de la lógica se basa en la plantilla, mientras que en el enfoque basado en reactivos, la lógica reside principalmente en el componente.
 
 Los formularios reactivos están basados en flujos de datos de tipo Observable, donde cada entrada y cada valor toman la forma de un flujo de datos que puede ser accedido de manera asíncrona.
+
+## Seccion 12: Formularios en Angular
+
+### Clase 214: ¿Que aprenderemos en esta sección?
+
+1. Uso del modulo HTTP.
+2. Utilizaremos los servicios restful de Firebase
+3. POST.
+4. GET.
+5. DELETE.
+6. PUT.
+7. Configuraciones en la consola de Firebase.
