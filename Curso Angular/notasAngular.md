@@ -511,3 +511,41 @@ Temas:
 ### Clase 159: Comenzando con Auth0 - Componentes y servicios
 
 Una URL de __callback__ es una URL en su aplicación donde Auth0 redirige al usuario después de que se haya autenticado.
+
+## Seccion 10: Bonus: Login tradicional y manejo de tokens - Firebase
+
+### Clase 166: ¿Qué aprenderemos en esta seccion?
+
+Trabajaremos con un proceso de autenticacion por token tradicional
+
+Temas de la seccion:
+  >
+    1. Validar formularios
+    2. Tokens
+    3. LocalStorage
+    4. Borrar tokens
+    5. Caducidad de tokens
+    6. Creación de usuarios
+    7. Posteos
+    8. Firebase REST API
+
+### Clase 174: Firebase y servicios REST
+
+Firebase es una plataforma para el desarrollo de aplicaciones web y aplicaciones móviles, trabaja como una base de datos NoSQL tipo documento manejando los datos en tiempo real. Su función esencial es hacer más sencilla la creación de tanto aplicaciones webs como móviles y su desarrollo, procurando que el trabajo sea más rápido, pero sin renunciar a la calidad requerida.
+
+Los servicios web RESTful son aplicaciones cliente-servidor a través de la red que manipulan el estado de los recursos. En este contexto, la manipulación de los recursos significa creación de recursos, recuperación, modificación y borrado.
+
+### Clase 176: Login de usuarios
+El token de autenticación nos dice quién hace la solicitud y qué acciones puede realizar ese usuario. La autenticación por token es algo que se tiene que hacer del lado del servidor. 
+
+Para evitar que en cada llamada el usuario deba entregar su clave y password se usa un token.
+
+### Clase 180: Guard para proteger la ruta sin autenticación
+Los Guards en Angular, son de alguna manera: middlewares que se ejecutan antes de cargar una ruta y determinan si se puede cargar dicha ruta o no.
+
+1. __(CanActivate)__ Antes de cargar los componentes de la ruta.
+2. __(CanLoad)__ Antes de cargar los recursos (assets) de la ruta.
+3. __(CanDeactivate)__ Antes de intentar salir de la ruta actual (usualmente utilizado para evitar salir de una ruta, si no se han guardado los datos).
+4. __(CanActivateChild)__ Antes de cargar las rutas hijas de la ruta actual.
+
+Como middleware, estos componentes se ejecutan de manera intermedia antes de determinadas acciones y si retorna `true` la ruta seguiría su carga normal, en caso negativo, el Guard retornaría `false` y la ruta no se cargaría. Generalmente en caso de que no se cumpla la condición del Guard, se suele hacer una redirección a la ruta anterior o a una ruta definida como la interfaz de autenticación.
