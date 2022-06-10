@@ -549,3 +549,28 @@ Los Guards en Angular, son de alguna manera: middlewares que se ejecutan antes d
 4. __(CanActivateChild)__ Antes de cargar las rutas hijas de la ruta actual.
 
 Como middleware, estos componentes se ejecutan de manera intermedia antes de determinadas acciones y si retorna `true` la ruta seguiría su carga normal, en caso negativo, el Guard retornaría `false` y la ruta no se cargaría. Generalmente en caso de que no se cumpla la condición del Guard, se suele hacer una redirección a la ruta anterior o a una ruta definida como la interfaz de autenticación.
+
+## Seccion 11: Formularios en angular
+
+### Clase 185: ¿Que aprenderemos en esta sección?
+
+1. Diferentes aproximaciones que tiene angular para trabajar formularios.
+2. Profundizaremos en el uso del ngModel.
+3. Utilizar las validaciones pre fabricadas.
+4. Crear validaciones personalizadas.
+5. Crear validaciones asíncronas.
+6. Realizar un submit utilizando el ngSubmit.
+7. Postear información únicamente cuando el formulario es valido,
+8. Crear formularios del lado del componente.
+9. Cargar información por defecto a los formularios.
+10. Subscribirnos a los cambios de los valores de los formularios.
+
+### Clase 188: Creacion de componentes - Formularios y Rutas
+
+Formularios basados ​​en plantillas __(Template Forms)__ y formularios reactivos __(Reactive Forms).__
+
+1. Los formularios basados ​​en plantillas utilizan el “FormsModule”, mientras que los formularios reactivos se basan en “ReactiveFormsModule”.
+2. Los formularios basados ​​en plantillas son de naturaleza asincrónica, mientras que los formularios reactivos son en su mayoría sincrónicos.
+3. En un enfoque basado en plantillas, la mayor parte de la lógica se basa en la plantilla, mientras que en el enfoque basado en reactivos, la lógica reside principalmente en el componente.
+
+Los formularios reactivos están basados en flujos de datos de tipo Observable, donde cada entrada y cada valor toman la forma de un flujo de datos que puede ser accedido de manera asíncrona.
