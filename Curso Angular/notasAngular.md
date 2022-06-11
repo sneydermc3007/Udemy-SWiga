@@ -586,3 +586,14 @@ Los formularios reactivos están basados en flujos de datos de tipo Observable, 
 5. DELETE.
 6. PUT.
 7. Configuraciones en la consola de Firebase.
+
+### Clase 230: ¿Que aprenderemos en esta sección?
+
+1. Uso de AngularFire2 - Librería oficial de angular para conectarse a Firebase.
+2. Crear observables para escuchar mediante sockets los cambios en Firebase.
+3. Utilizaremos la autenticación de Google y Twitter para nuestro chat.
+4. Uso de AngularFire2 para manejar las inserciones.
+5. Uso de promesas para poder ejecutar funciones cuando detectamos cambios en la base de datos.
+6. Usaremos el local storage para almacenar información del login para mantener las sesión.
+7. Entre otras cosas útiles.
+
