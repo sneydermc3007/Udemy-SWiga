@@ -587,6 +587,8 @@ Los formularios reactivos están basados en flujos de datos de tipo Observable, 
 6. PUT.
 7. Configuraciones en la consola de Firebase.
 
+## Seccion 13: Aplicacion #7: FireCha - AngularFire2
+
 ### Clase 230: ¿Que aprenderemos en esta sección?
 
 1. Uso de AngularFire2 - Librería oficial de angular para conectarse a Firebase.
@@ -597,3 +599,43 @@ Los formularios reactivos están basados en flujos de datos de tipo Observable, 
 6. Usaremos el local storage para almacenar información del login para mantener las sesión.
 7. Entre otras cosas útiles.
 
+## Seccion 14: Aplicacion #8: PeliculasApps
+
+Se trabajara con API llamada __TheMobieApp__ API, para hacer una aplicacion de bsquedad de peliculas.
+
+Temas puntuales de la seccion como:
+
+1. Http Get
+2. Operadores de RXJS como el Tap y Map
+3. Combinar observables
+4. Módulos
+5. Estructura de un proyecto real
+6. Servicios
+7. Slideshow
+8. Swiper
+
+### Clase 247: Modulos Angular
+
+Un **módulo de Angular**, es un conjunto de código dedicado a un ámbito concreto de la aplicación, o una funcionalidad específica y se **define mediante una clase decorada con @NgModule**.
+
+### Decorador @NgModule
+
+NgModulees un decorador que recibe un objeto de metadatos que definen el módulo. Los metadatos más importantes de un NgModule son:
+
+1. **declarations:** Las vistas que pertenecen a tu módulo. Hay 3 tipos de clases de tipo vista: _componentes_, _directivas_ y _pipes_.
+2. **exports:** Conjunto de declaraciones que deben ser accesibles para templates de componentes de otros módulos.
+3. **imports:** Otros NgModules, cuyas clases exportadas son requeridas por templates de componentes de este módulo.
+4. **providers:** Los servicios que necesita este módulo, y que estarán disponibles para toda la aplicación.
+5. **bootstrap:** Define la vista raíz. Utilizado solo por el root module.
+
+[Blog Modulos](http://blog.enriqueoriol.com/2017/03/introduccion-angular-modulo-y-componente.html#:~:text=Un%20módulo%20de%20Angular%2C%20es,principal%20(o%20root%20module).)
+
+### Clase 257: InfinitiScroll peliculas
+
+`@HostListener('')` Decorador que declara un evento DOM para escuchar,y proporciona un método de manejo para ejecutar cuando ese evento ocurre.
+
+Angular invoca el método manejador suministrado cuando el elemento anfitrión emite el evento especificado,y actualiza el elemento vinculado con el resultado.
+
+Si el método del controlador devuelve falso, aplica preventDefault en el elemento enlazado.
+
+[Blog](https://runebook.dev/es/docs/angular/api/core/hostlistener#:~:text=Angular%20-%20HostListener%20-%20decorator%20Decorador%20que,y%20proporciona%20un%20mét%20-%20Español)
