@@ -42,4 +42,4 @@ testem.log
 Thumbs.db
 
 # Service
-./app/service/youtube.service.ts
+./src/app/services/youtube.service.ts
