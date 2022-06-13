@@ -640,7 +640,9 @@ Si el método del controlador devuelve falso, aplica preventDefault en el elemen
 
 [Blog](https://runebook.dev/es/docs/angular/api/core/hostlistener#:~:text=Angular%20-%20HostListener%20-%20decorator%20Decorador%20que,y%20proporciona%20un%20mét%20-%20Español)
 
-## Seccion 16: ¿Que aprenderemos en esta sección?
+## Seccion 16: Aplicacion #9: Uso de Google Maps
+
+### Clase 273: ¿Que aprenderemos en esta sección?
 
 1. Uso de Google Maps en un proyecto con Angular
 2. Creación del API KEY de Google Maps
@@ -672,3 +674,17 @@ Los **entryComponents** son cualquier componente que Angular carga imperativamen
 
 _Nota_
 > Acctualmente esta en desuso
+
+## Seccion 17: Aplicacion #10: Canal de Youtube
+
+### Clase 289: ¿Que aprenderemos en esta sección?
+
+El objetivo es enseñar a utilizar la API de youtube y repasar lo aprendido hasta el curso.
+
+1. Creación de una API KEY para accesar los servicios de YouTube API v3a
+2. Uso de la documentación de YouTube para obtener información de un canal
+3. Obtener una lista de reproducción
+4. Crear una página en la cual pueda cargar los videos de forma paginada
+5. Usar el Token de respuesta de la api de YouTube
+6. Trabajar con tipado de datos
+7. SweetAlert2
