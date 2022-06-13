@@ -639,3 +639,36 @@ Angular invoca el método manejador suministrado cuando el elemento anfitrión e
 Si el método del controlador devuelve falso, aplica preventDefault en el elemento enlazado.
 
 [Blog](https://runebook.dev/es/docs/angular/api/core/hostlistener#:~:text=Angular%20-%20HostListener%20-%20decorator%20Decorador%20que,y%20proporciona%20un%20mét%20-%20Español)
+
+## Seccion 16: ¿Que aprenderemos en esta sección?
+
+1. Uso de Google Maps en un proyecto con Angular
+2. Creación del API KEY de Google Maps
+3. Uso de Reactive Forms - FormBuilder
+4. Creación de marcadores en el mapa
+5. Eventos y diversas interacciones con los mapas
+6. Edición de marcadores
+7. Uso de Angular Material en el proyecto
+7.1. Dialogs
+7.2. Snacks
+7.3. Inputs
+7.4. Toolbars
+7.5. Themes
+
+### Clase 278: Componente mapa y diseño
+
+Para decirle a **AngularCLI** en que modulo queremos que se instale un *componente* cuando hay varios *modulos* en una misma linea usamos `--module=(nombre del modulo).module`
+
+### Clase 284: Dialog - Mostrar un modal para la ediccion del marcador
+
+Los **entryComponents** son cualquier componente que Angular carga imperativamente (lo que significa que no está haciendo referencia a él en la plantilla), por tipo. Usted especifica un componente de entrada al iniciarlo en un NgModule o al incluirlo en una definición de enrutamiento.
+
+``` ts
+ const dialogRef = this.dialog.open( MapaEditarComponent , {
+      width: '250px',
+      data: { titulo: marcador.titulo, desc: marcador.desc }
+    });
+```
+
+_Nota_
+> Acctualmente esta en desuso
