@@ -688,3 +688,20 @@ El objetivo es enseñar a utilizar la API de youtube y repasar lo aprendido hast
 5. Usar el Token de respuesta de la api de YouTube
 6. Trabajar con tipado de datos
 7. SweetAlert2
+
+## Seccion 18: Desplegandolas aplicaciones a produccion.
+
+### Clase 301: ¿Que aprenderemos en esta sección?
+
+1. Crear los archivos de distribución de nuestra aplicación
+2. Crear los archivos para realizar pruebas de Pre-Producción
+3. Montarlo en un servidor diferente para probar la aplicación
+
+El objetivo es aprender a crear lso archivos que necesitamos utilizar para poder desplegarlos en el servidor de despliegue sin importar la plataforma que se este utilizando.
+
+### Clase 302. Generando la carpeta dist
+
+El comando `ng build` permite hacer más cosas enfocadas a desplegar en producción: Hace el minify uglify, es decir, reduce el tamaño del código, quitando los espacios en blanco y acortando el nombre de las variables.
+
+Nota: Para vericar que todo este en produccion antes de ejecutar el comando `http-serve` se debe poner `ng build --prod --configuration production` para que asi los url a punten a la misma ruta.
+
