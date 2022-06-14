@@ -818,3 +818,36 @@ Es una solución bienvenida para un codificador que quiere mantener un archivo d
 En este caso cuando el _displayMe_ tenga un valor verdadero, se mostrará Hi, Google, y cuando sea el valor falso, se mostrará Hi, Twitter.
 
 ## Seccion 22: Graficas Dinamicas en Angular
+
+### Clase 335: ¿Que aprenderemos en esta seccion?
+
+El objetivo es enseñar a usar gráficas dinámicas en Angular.
+
+Los temas a tratar son:
+
+1. Instalaciones necesarias
+2. Configuraciones
+3. Gráfico de Barras
+4. Gráfico de Donas
+5. Gráfico de Radar
+
+## Seccion 23: Virtual Scrool y Drag-Drop nuevo en Angular7
+
+### Clase 344: Temas puntuales de la sección
+
+Principalmente nos enfocaremos en dos temas principales:
+
+1. Drag and Drop de Angular
+2. Virtual Scroll
+
+Para instalar las dependencias se usa: `@angular/cdk`
+
+#### Virtualscroll
+Virtual scrolling es una funcionalidad que salió en Angular 7 que nos permite mostrar varios elementos de una forma mas optima, ya que si por ejemplo, tuviéramos 1000 elementos, no mostraría los 1000 elementos sino que al hacer scroll iría cambiando los elementos, haciendo que tengamos menos elementos realment.
+
+Para la etiqueta: `<cdk-virtual-scroll-viewport>`
+
+#### Drag and Drop
+Drag and drop es una funcionalidad que salió en Angular 7 que nos permite mover elementos de una zona a otra «arrastrando» y «soltando», es muy visual a nivel de usuario.
+
+Para la etiqueta: `cdkDrag`
