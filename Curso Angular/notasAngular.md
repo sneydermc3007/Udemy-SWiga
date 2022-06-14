@@ -705,3 +705,58 @@ El comando `ng build` permite hacer más cosas enfocadas a desplegar en producci
 
 Nota: Para vericar que todo este en produccion antes de ejecutar el comando `http-serve` se debe poner `ng build --prod --configuration production` para que asi los url a punten a la misma ruta.
 
+## Seccion 19: 
+
+### Clase 307: ¿Que aprenderemos en esta seccion?
+
+1. Darles todos los códigos fuente de los programas creados a lo largo del curso
+2. Darles el manual oficial de la guía de estilos para TypeScript y Angular 2
+3. Información adicional sobre Angular-CLI
+4. Referencias para aprender más sobre TypeScript
+5. Un framework de estilos usando el material design
+6. Un ejercicio adicional oficial de Angular, para seguir practicando lo aprendido
+
+La seccion tiene como objetivo dar mas documentación para aprender lo mas posible sobre el framework Angular.
+
+### Clase 309: Guia de estilos oficial de Angular
+
+El equipo de angular ha creado una documentación con recomendaciones, alertas y casos en los que se debe evitar cierto tipo de codificación. 
+
+[Guia](https://angular.io/guide/styleguide)
+
+
+### Clase 310: Mas informacion sobre Angular-CLI
+
+[Documentacion](https://angular.io/cli)
+
+### Clase 311: Handbook de TypeScript
+
+[TypeScript](https://www.typescriptlang.org/docs/handbook/basic-types.html)
+
+### Clase 312: Angular Material
+
+Angular Material es una guía de estilos similar al Bootstra
+
+[Material](https://material.angular.io)
+
+## Seccion 20: Bonus -Fileupload hacia Firebase
+
+### Clase 314: ¿Que aprenderemos en esta seccion?
+
+El objetivo es aprender a realizar subidas de archivos al Storage de Firebase.
+
+Veremos temas sobre:
+
+1. Uso de directivas
+2. Detalles del Hostlistener
+3. Input y Outputs
+4. Storage de Firebase
+5. uploadTask de Firebase
+6. Evento drop, dragenter, dragleave, dragover
+7. Uso de tipo de dato File
+
+### Clase 321: Directiva del DropZone
+
+Al igual que las directivas de atributo personalizadas, en Angular podemos crear nuestras propias directivas estructurales a parte de las internas de framework: *ngFor, *ngIf, *ngSwitchCase y *ngSwitchDefault.
+
+Recordemos que las directivas estructurales tienen por objetivo añadir, manipular o eliminar elementos del DOM (Document Object Model)
