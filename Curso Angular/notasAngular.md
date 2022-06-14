@@ -760,3 +760,61 @@ Veremos temas sobre:
 Al igual que las directivas de atributo personalizadas, en Angular podemos crear nuestras propias directivas estructurales a parte de las internas de framework: *ngFor, *ngIf, *ngSwitchCase y *ngSwitchDefault.
 
 Recordemos que las directivas estructurales tienen por objetivo añadir, manipular o eliminar elementos del DOM (Document Object Model)
+
+## Seccion 21: Actualizaciones sobre Angular 4,5,6 y Angular-CLI
+
+
+### Clase 329: Puntos importantes sobre Angular
+
+Angular ha realizado una actualización mayor que es compatible con cualquier versión utilizada desde la 2.x.x, por lo que no es motivo para que la gente se sienta preocupada.
+
+Angular es ahora más pequeño, más rápido, los archivos generados también son más pequeños.
+
+### Clase 334: Nuevo: ngIf - else - then. Angular 4 > 
+
+*ngIf se usa para manipular elementos HTTP representados en una página. Funciona en una condición en la que le decimos a la aplicación web que realice una determinada función después de que se hayan establecido algunos parámetros.
+
+#### *ngIf con else
+
+Cuando la condición `*ngIf` se combina con la declaración `else`, nos ayuda a decidir qué contenido queremos que aparezca en la página web en cualquier momento. Este metodo requiere usar el __ng-template__.
+
+``` ts
+h1>*ngIf in ANgular</h1>
+<h2 *ngIf="displayMe else elseBlock">
+  Hi, Youtube
+</h2>
+<ng-template #elseBlock>
+<h2>
+    Hi, Twitter
+    </h2>
+</ng-template>
+
+```
+En este caso cuando cuando la variable _displayMe_ tenga un valor verdadero mostrara Youtube y cuando sea falso Twitter.
+
+#### *ngIf con else y then
+
+Cuando se usa con `*ngIf` y `else`, la instrucción then permite manipular contenidos dentro de la __plantilla ng.__
+
+Es una solución bienvenida para un codificador que quiere mantener un archivo de código estructurado y bien organizado.
+
+``` ts
+<h1>*ngIf in ANgular</h1>
+<h2 *ngIf="displayMe; then ifBlock else elseBlock">
+  Hi, Youtube
+</h2>
+<ng-template #ifBlock>
+<h2>
+    Hi, Google
+    </h2>
+</ng-template>
+<ng-template #elseBlock>
+<h2>
+    Hi, Twitter
+    </h2>
+</ng-template>
+```
+
+En este caso cuando el _displayMe_ tenga un valor verdadero, se mostrará Hi, Google, y cuando sea el valor falso, se mostrará Hi, Twitter.
+
+## Seccion 22: Graficas Dinamicas en Angular

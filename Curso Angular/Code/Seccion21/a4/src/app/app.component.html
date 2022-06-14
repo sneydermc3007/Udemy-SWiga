@@ -1,0 +1,20 @@
+********* <br />
+
+<div *ngIf="usuario; then logout else login">Bienvenido {{ usuario }}</div>
+
+<br />
+*********
+
+<ng-template #logout>
+
+  Bienvenido {{usuario}}
+
+</ng-template>
+
+<ng-template #login>
+  Por favor ingrese <br />
+
+  <button class="btn btn-primary" (click)="usuario = 'Sneyder'">
+    Ingresar
+  </button>
+</ng-template>
