@@ -851,3 +851,5 @@ Para la etiqueta: `<cdk-virtual-scroll-viewport>`
 Drag and drop es una funcionalidad que salió en Angular 7 que nos permite mover elementos de una zona a otra «arrastrando» y «soltando», es muy visual a nivel de usuario.
 
 Para la etiqueta: `cdkDrag`
+
+## Seccion 24: Bonus: Angular, Firestore, Firebase functions, deployment y mas.
